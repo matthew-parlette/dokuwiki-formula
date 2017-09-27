@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 dokuwiki:
-  image: username/dokuwiki
+  image: mprasil/dokuwiki
   name: dokuwiki
   branch: latest
