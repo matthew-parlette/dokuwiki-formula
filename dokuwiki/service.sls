@@ -11,7 +11,7 @@ dokuwiki-container:
     - name: {{ dokuwiki.name }}
     - image: {{ dokuwiki.image }}:{{ dokuwiki.branch }}
     - port_bindings:
-      - {{ dokuwiki.port }}:3000
+      - {{ dokuwiki.port }}:80
     {%- if dokuwiki['environment'] is defined %}
     - environment:
       {%- for env, value in dokuwiki.environment.items() %}
