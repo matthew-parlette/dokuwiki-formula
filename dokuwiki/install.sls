@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% from "template/map.jinja" import template with context %}
+{% from "dokuwiki/map.jinja" import dokuwiki with context %}
 
-template-pkg:
-  pkg.installed:
-    - name: {{ template.pkg }}
+dokuwiki-image:
+  dockerng.image_present:
+    - name: {{ dokuwiki.image }}:{{ dokuwiki.branch }}
+    - force: True
