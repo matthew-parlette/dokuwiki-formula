@@ -1,4 +1,9 @@
 dokuwiki:
   port: 3000
+  path:
+    data: /var/dokuwiki/data
+    plugins: /var/dokuwiki/lib/plugins
+    conf: /var/dokuwiki/conf
+    tpl: /var/dokuwiki/lib/tpl
   environment:
     # key: value

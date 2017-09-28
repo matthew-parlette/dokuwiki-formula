@@ -4,4 +4,5 @@
 include:
   - dokuwiki.install
   - dokuwiki.config
+  - dokuwiki.directories
   - dokuwiki.service
