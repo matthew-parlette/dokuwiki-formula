@@ -12,10 +12,10 @@ dokuwiki-container:
     - name: {{ dokuwiki.name }}
     - image: {{ dokuwiki.image }}:{{ dokuwiki.branch }}
     - binds:
-      - {{ dokuwiki.path['data'] }}:/dokuwiki/data:rw
-      - {{ dokuwiki.path['plugins'] }}:/dokuwiki/lib/plugins:rw
-      - {{ dokuwiki.path['conf'] }}:/dokuwiki/conf:rw
-      - {{ dokuwiki.path['tpl'] }}:/dokuwiki/lib/tpl:rw
+      - {{ dokuwiki.path['data'] }}:/dokuwiki/data/:rw
+      - {{ dokuwiki.path['plugins'] }}:/dokuwiki/lib/plugins/:rw
+      - {{ dokuwiki.path['conf'] }}:/dokuwiki/conf/:rw
+      - {{ dokuwiki.path['tpl'] }}:/dokuwiki/lib/tpl/:rw
     - port_bindings:
       - {{ dokuwiki.port }}:80
     {%- if dokuwiki['environment'] is defined %}
