@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 dokuwiki:
-  image: mprasil/dokuwiki
+  image: mattparlette/dokuwiki
   name: dokuwiki
   branch: latest
   directory: /var/dokuwiki
