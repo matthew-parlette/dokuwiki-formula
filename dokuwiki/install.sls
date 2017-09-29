@@ -19,3 +19,4 @@ dokuwiki-install:
     - group: 33
     - skip_verify: True
     - options: --strip-components=1
+    - enforce_toplevel: False
