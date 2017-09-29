@@ -12,10 +12,7 @@ dokuwiki-container:
     - name: {{ dokuwiki.name }}
     - image: {{ dokuwiki.image }}:{{ dokuwiki.branch }}
     - binds:
-      - {{ dokuwiki.path['data'] }}:/dokuwiki/data/:rw
-      - {{ dokuwiki.path['plugins'] }}:/dokuwiki/lib/plugins/:rw
-      - {{ dokuwiki.path['conf'] }}:/dokuwiki/conf/:rw
-      - {{ dokuwiki.path['tpl'] }}:/dokuwiki/lib/tpl/:rw
+      - {{ dokuwiki.directory }}:/dokuwiki:rw
     - port_bindings:
       - {{ dokuwiki.port }}:80
     {%- if dokuwiki['environment'] is defined %}
@@ -26,7 +23,4 @@ dokuwiki-container:
     {%- endif %}
     - require:
       - dockerng: dokuwiki-image
-      - file: dokuwiki-data-dir
-      - file: dokuwiki-plugins-dir
-      - file: dokuwiki-conf-dir
-      - file: dokuwiki-tpl-dir
+      - file: dokuwiki-directory
