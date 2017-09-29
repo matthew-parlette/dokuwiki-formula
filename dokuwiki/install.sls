@@ -13,9 +13,9 @@ dokuwiki-image:
 
 dokuwiki-install:
   archive.extracted:
-    - name: {{ dokuwiki.directory }}
+    - name: {{ dokuwiki.directory }}/
     - source: https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
     - user: 33
     - group: 33
     - skip_verify: True
-    - tar_options: --strip-components=1
+    - options: --strip-components=1
