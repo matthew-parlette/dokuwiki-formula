@@ -18,4 +18,4 @@ dokuwiki-install:
     - user: 33
     - group: 33
     - skip_verify: True
-    - tar_options: --strip-components=1
+    - clean: True
