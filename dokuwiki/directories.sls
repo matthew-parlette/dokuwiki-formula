@@ -4,6 +4,13 @@ dokuwiki-data-dir:
   file.directory:
     - name: {{ dokuwiki.path['data'] }}
     - user: 33
+    - group: 33
+    - dir_mode: 755
+    - file_mode: 644
+    - recurse:
+      - user
+      - group
+      - mode
     - makedirs: True
 
 dokuwiki-plugins-dir:
